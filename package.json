@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "update": "ncu -u -a && npm install",
-    "postversion": "git push && git push --tags && npm publish bin/",
+    "postversion": "git push && git push --tags && npm publish",
     "release": "npm version",
     "webpack:watch": "webpack --progress --colors --watch"
   },
