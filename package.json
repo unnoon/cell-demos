@@ -1,0 +1,33 @@
+{
+  "name": "cell-demos",
+  "description": "cell-engine demos: clockclock.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/unnoon/cell-demos",
+  "author": {
+    "name": "Rogier Geertzema",
+    "email": "r.geertzema@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "homepage": "https://github.com/unnoon/cell-demos"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cell-engine",
+    "demo",
+    "clockclock"
+  ],
+  "scripts": {
+    "update": "ncu -u -a && npm install",
+    "postversion": "git push && git push --tags && npm publish bin/",
+    "release": "npm version",
+    "webpack:watch": "webpack --progress --colors --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tslint": "^5.7.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.5.3",
+    "webpack": "^3.6.0"
+  }
+}
