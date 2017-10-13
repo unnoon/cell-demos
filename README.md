@@ -14,7 +14,7 @@ Collection of demos for [cell-engine](https://github.com/unnoon/cell-engine) ECS
 
 ### ClockClock
 
-<img src="https://github.com/unnoon/cell-demos/raw/master/demos/clockclock/rsc/img/clockclock.jpg" width="500" height="252" />
+[<img src="https://github.com/unnoon/cell-demos/raw/master/demos/clockclock/rsc/img/clockclock.jpg" width="500" height="252" />](demos/clockclock)
 
 ### to be continued
 
