@@ -1882,8 +1882,8 @@ var substr = 'ab'.substr(-1) === 'b'
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__classes_KeyedIterator__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_negate__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__classes_KeyedIterator__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__functions_negate__ = __webpack_require__(213);
 /**
  * Created by Rogier on 13/04/2017.
  */
@@ -3238,7 +3238,7 @@ removeAllHandlers(Texture.WHITE.baseTexture);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["default"] = each;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__generators_enumerate__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__generators_enumerate__ = __webpack_require__(46);
 
 /**
  * Invokes iteratee for every item in a collection.
@@ -7213,9 +7213,9 @@ function buildNativeLine(graphicsData, webGLData) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = reduce;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__classes_KeyedIterator__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__classes_KeyedIterator__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lang_is__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__generators_enumerate__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__generators_enumerate__ = __webpack_require__(46);
 /**
  * Created by Rogier on 13/04/2017.
  */
@@ -12148,45 +12148,7 @@ function findTextStyle(item, queue) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = enumerate;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__classes_KeyedIterator__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lang_is__ = __webpack_require__(7);
-/**
- * Created by Rogier on 13/04/2017.
- */
-
-
-/**
- * Enumerates any collection using a generic keyedIterator that returns a (artificial) key value pair.
- * Optionally a from & to key can be provided for partial enumeration.
- *
- * @generator
- *
- * @param collection - Collection to enumerate.
- * @param from       - From key to start enumeration.
- * @param to         - To key (exclusive) to stop enumeration.
- *
- * @yields Array containing key & value [any, any].
- */
-function* enumerate(collection, from, to) {
-    const it = __WEBPACK_IMPORTED_MODULE_0__classes_KeyedIterator__["a" /* default */].create(collection);
-    let yields = it.next();
-    let kvp = yields.value; // key-value-pair
-    from = __WEBPACK_IMPORTED_MODULE_1__lang_is__["a" /* default */].undefined(from) && kvp ? kvp[0] : from;
-    /* tslint:disable-next-line:no-empty */
-    for (; !yields.done && kvp[0] !== from; yields = it.next(), kvp = yields.value) { } // fast forward to from
-    for (; !yields.done && kvp[0] !== to; yields = it.next(), kvp = yields.value) {
-        yield kvp;
-    }
-}
-//# sourceMappingURL=enumerate.js.map
-
-/***/ }),
-/* 46 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lang_identity__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lang_identity__ = __webpack_require__(212);
 /**
  * Created by Rogier on 05/05/2017.
  */
@@ -12262,13 +12224,51 @@ class KeyedIterator {
 //# sourceMappingURL=KeyedIterator.js.map
 
 /***/ }),
+/* 46 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = enumerate;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__classes_KeyedIterator__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lang_is__ = __webpack_require__(7);
+/**
+ * Created by Rogier on 13/04/2017.
+ */
+
+
+/**
+ * Enumerates any collection using a generic keyedIterator that returns a (artificial) key value pair.
+ * Optionally a from & to key can be provided for partial enumeration.
+ *
+ * @generator
+ *
+ * @param collection - Collection to enumerate.
+ * @param from       - From key to start enumeration.
+ * @param to         - To key (exclusive) to stop enumeration.
+ *
+ * @yields Array containing key & value [any, any].
+ */
+function* enumerate(collection, from, to) {
+    const it = __WEBPACK_IMPORTED_MODULE_0__classes_KeyedIterator__["a" /* default */].create(collection);
+    let yields = it.next();
+    let kvp = yields.value; // key-value-pair
+    from = __WEBPACK_IMPORTED_MODULE_1__lang_is__["a" /* default */].undefined(from) && kvp ? kvp[0] : from;
+    /* tslint:disable-next-line:no-empty */
+    for (; !yields.done && kvp[0] !== from; yields = it.next(), kvp = yields.value) { } // fast forward to from
+    for (; !yields.done && kvp[0] !== to; yields = it.next(), kvp = yields.value) {
+        yield kvp;
+    }
+}
+//# sourceMappingURL=enumerate.js.map
+
+/***/ }),
 /* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["default"] = find;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__generators_enumerate__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__generators_enumerate__ = __webpack_require__(46);
 
 /**
  * Returns the first value in a collection matched by the match function.
@@ -47561,7 +47561,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __webpack_require__(109);
 __webpack_require__(110);
 const Application_1 = __webpack_require__(111);
-const CellManager_1 = __webpack_require__(212);
+const CellManager_1 = __webpack_require__(214);
 const EventQueue_1 = __webpack_require__(215);
 const SceneLoader_1 = __webpack_require__(216);
 const Store_1 = __webpack_require__(221);
@@ -47573,7 +47573,7 @@ const Components = __webpack_require__(241);
 const Systems = __webpack_require__(248);
 const order_2 = __webpack_require__(260);
 const main_1 = __webpack_require__(261);
-const game = new Application_1.default(800, 600, { backgroundColor: 0xFFFFFF });
+const game = new Application_1.default({ width: 800, height: 600, backgroundColor: 0xFFFFFF, parent: 'game' });
 const events = new EventQueue_1.default();
 const cells = new CellManager_1.default(Cells, order_1.default);
 const store = new Store_1.default(cells);
@@ -48740,9 +48740,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Stage__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bottom_line_lang_is__ = __webpack_require__(7);
 /**
  * Created by Rogier on 27/06/2017.
  */
+
 
 
 /**
@@ -48752,17 +48754,33 @@ class Application extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Application"] {
     /**
      * Creates a new instance of Application.
      *
-     * @param width   - Width of the stage.
-     * @param height  - Height of the stage.
-     * @param options - Optional options such as backgroundColor.
+     * @param options - Optional options such as width, height, backgroundColor, parent.
      *
      * @returns new Application
      */
-    constructor(width, height, options) {
-        super(width, height, options);
-        document.body.appendChild(this.view);
+    constructor(options) {
+        super(options);
+        this.add2Parent(options.parent);
         // create the root of the scene graph
-        this.stage = new __WEBPACK_IMPORTED_MODULE_1__Stage__["a" /* default */](width, height);
+        this.stage = new __WEBPACK_IMPORTED_MODULE_1__Stage__["a" /* default */](this.view.width, this.view.height);
+    }
+    /**
+     * Attaches the view to the HTMLElement matching the #id provided or the document.body otherwise.
+     *
+     * @param parent - A HTML element id.
+     *
+     * @returns this for chaining.
+     */
+    add2Parent(parent) {
+        let target;
+        if (__WEBPACK_IMPORTED_MODULE_2_bottom_line_lang_is__["a" /* default */].string(parent)) {
+            target = document.getElementById(parent);
+        }
+        if (!target) {
+            target = document.body;
+        }
+        target.appendChild(this.view);
+        return this;
     }
 }
 /* harmony export (immutable) */ __webpack_exports__["default"] = Application;
@@ -69342,6 +69360,57 @@ class Stage extends __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Container"] {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = iterator;
+/**
+ * Created by Rogier on 13/04/2017.
+ */
+/**
+ * Generic object keyedIterator.
+ *
+ * @generator
+ *
+ * @yields Array containing key & value [any , any].
+ */
+function* iterator() {
+    for (const key in this) {
+        /* istanbul ignore if */
+        if (!this.hasOwnProperty(key)) {
+            continue;
+        }
+        yield [key, this[key]];
+    }
+}
+//# sourceMappingURL=identity.js.map
+
+/***/ }),
+/* 213 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = negate;
+/**
+ * Created by Rogier on 13/04/2017.
+ */
+/**
+ * Return a function with negated output of the original function.
+ *
+ * @param fn - Function to negate.
+ *
+ * @returns The negated function.
+ */
+/* tslint:disable-next-line:ban-types */
+function negate(fn) {
+    return function (...args) {
+        return !fn.apply(this, args);
+    };
+}
+//# sourceMappingURL=negate.js.map
+
+/***/ }),
+/* 214 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bottom_line_collections_each__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bottom_line_lang_is__ = __webpack_require__(7);
@@ -69417,57 +69486,6 @@ class CellManager {
 /* harmony export (immutable) */ __webpack_exports__["default"] = CellManager;
 
 //# sourceMappingURL=CellManager.js.map
-
-/***/ }),
-/* 213 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = iterator;
-/**
- * Created by Rogier on 13/04/2017.
- */
-/**
- * Generic object keyedIterator.
- *
- * @generator
- *
- * @yields Array containing key & value [any , any].
- */
-function* iterator() {
-    for (const key in this) {
-        /* istanbul ignore if */
-        if (!this.hasOwnProperty(key)) {
-            continue;
-        }
-        yield [key, this[key]];
-    }
-}
-//# sourceMappingURL=identity.js.map
-
-/***/ }),
-/* 214 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = negate;
-/**
- * Created by Rogier on 13/04/2017.
- */
-/**
- * Return a function with negated output of the original function.
- *
- * @param fn - Function to negate.
- *
- * @returns The negated function.
- */
-/* tslint:disable-next-line:ban-types */
-function negate(fn) {
-    return function (...args) {
-        return !fn.apply(this, args);
-    };
-}
-//# sourceMappingURL=negate.js.map
 
 /***/ }),
 /* 215 */
