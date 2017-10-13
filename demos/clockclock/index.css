@@ -1,0 +1,18 @@
+html, body, .midpointer
+{
+    height: 100%;
+    width: 100%;
+}
+
+.midpointer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game canvas
+{
+    width: 100%;
+    max-width: 800px;
+}
