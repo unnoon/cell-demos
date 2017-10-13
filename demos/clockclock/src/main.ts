@@ -21,7 +21,7 @@ import SystemOrder     from './systems/order';
 
 import scn_main        from './scenes/main';
 
-const game    = new Application(800, 600, {backgroundColor: 0xFFFFFF});
+const game    = new Application({width: 800, height: 600, backgroundColor: 0xFFFFFF, parent: 'game'});
 const events  = new EventQueue();
 const cells   = new CellManager(Cells, CellOrder);
 const store   = new Store(cells);
