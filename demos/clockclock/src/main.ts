@@ -1,6 +1,10 @@
 /**
  * Created by Rogier on 28/06/2017.
  */
+import 'style-loader!css-loader!normalize.css';
+
+import 'style-loader!css-loader!../index.css';
+
 import                           'cell-engine/requisites';
 import { ReactHTMLElement } from 'react';
 import                           'reflect-metadata';

@@ -7,14 +7,28 @@ module.exports = {
         libraryTarget: 'umd'
     },
     resolve: {
-        extensions: ['.js', '.ts', '.tsx', '.jsx', 'json']
+        extensions: ['.css', '.js', '.ts', '.tsx', '.jsx', 'json']
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
                 loader: 'awesome-typescript-loader'
+            },
+            {
+                test: /\.css$/,
+                include: /node_modules\/normalize\.css/,
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader" }
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    { loader: 'file-loader' }
+                ]
             }
         ]
     },
