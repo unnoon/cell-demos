@@ -1,7 +1,7 @@
 {
   "name": "cell-demos",
   "description": "cell-engine demos: clockclock.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/unnoon/cell-demos",
   "author": {
     "name": "Rogier Geertzema",
